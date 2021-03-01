@@ -31,14 +31,28 @@
       </div>
     </nav>
 
+    <% if(message) {%>
+    <div
+      style="
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: #f7bce5;
+        padding: 0.5rem 0;
+      "
+    >
+      <%= message%>
+    </div>
+    <%}%>
+
     <div class="container mt-4">
-      <form>
+      <form method="POST" action="/auth/login">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
           >
           <input
             type="email"
+            name="email"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
@@ -51,15 +65,10 @@
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
             type="password"
+            name="password"
             class="form-control"
             id="exampleInputPassword1"
           />
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

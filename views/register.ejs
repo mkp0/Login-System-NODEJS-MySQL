@@ -31,7 +31,18 @@
       </div>
     </nav>
 
-    <% if(message) {%>
+    <% if(message && isRegister) {%>
+    <div
+      style="
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: #a0ffa5;
+        padding: 0.5rem 0;
+      "
+    >
+      <%= message%>
+    </div>
+    <% }else if(message) {%>
     <div
       style="
         text-align: center;

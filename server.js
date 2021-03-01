@@ -4,6 +4,7 @@ const pagesRoute = require("./routes/pages");
 const authRoute = require("./routes/auth");
 const bodyParser = require("body-parser");
 const db = require("./dbConnection");
+const cookieParser = require("cookie-parser");
 
 dotenv.config({ path: "./.env" });
 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 

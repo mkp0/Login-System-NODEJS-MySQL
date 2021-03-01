@@ -36,3 +36,8 @@ nav ul li:hover a {
     color: yellow;
     font-weight: 400;
 }
+
+.marginAuto {
+    background-color: red;
+    margin: auto !important;
+}
